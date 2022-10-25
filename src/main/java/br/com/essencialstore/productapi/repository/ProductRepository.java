@@ -9,10 +9,7 @@ import java.util.List;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    @Query(value = "select p "
-            + "from product p "
-            + "join category c on p.category.id = c.id "
-            + "where c.id = :categoryId ")
+    @Query(value = "SELECT p FROM product p JOIN category c ON p.category.id = c.id WHERE c.id = :categoryId", nativeQuery = true)
     public List<Product> getProductByCategory(@Param("categoryId") long categoryId);
 
     public Product findByProductIdentifier(String productIdentifier);
