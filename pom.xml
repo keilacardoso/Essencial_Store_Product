@@ -41,6 +41,10 @@
 			<artifactId>flyway-core</artifactId>
 			<version>9.4.0</version>
 		</dependency>
+		<dependency>
+			<groupId>br.com.essencialstore.shopping.client</groupId>
+			<artifactId>shopping-client</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
